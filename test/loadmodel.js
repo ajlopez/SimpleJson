@@ -11,17 +11,16 @@ exports['load simple model'] = function (test) {
     test.equal(model.age, 800);
 }
 
-exports['load model with array'] = function (test) {
+exports['load model with object from subdirectory'] = function (test) {
     var model = sj.load('test/model');
     
     test.ok(model);
     test.ok(model.persons);
-    test.ok(Array.isArray(model.persons));
-    test.ok(model.persons.length);
-    test.equal(model.persons.length, 2);
-    test.equal(model.persons[0].name, "Adam");
-    test.equal(model.persons[0].age, 800);
-    test.equal(model.persons[1].name, "Eve");
-    test.equal(model.persons[1].age, 700);
+    test.ok(model.persons.adam);
+    test.ok(model.persons.eve);
+    test.equal(model.persons.adam.name, "Adam");
+    test.equal(model.persons.adam.age, 800);
+    test.equal(model.persons.eve.name, "Eve");
+    test.equal(model.persons.eve.age, 700);
 }
 
