@@ -21,6 +21,7 @@ TBD
 ## Versions
 
 - 0.0.1 Published
+- 0.0.2 Published, using filenames as property names
 
 ## Contribution
 
